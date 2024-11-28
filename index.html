@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Scientific Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        
+        <div class="calculator-display">
+            <input type="text" id="history" placeholder="History" disabled>
+            <input type="text" id="result" value="0" disabled>
+        </div>
+        
+        <div class="mode-section">
+            <button id="rad" onclick="setMode('rad')">Rad</button>
+            <button id="deg" onclick="setMode('deg')">Deg</button>
+        </div>
+
+        <div class="calculator-buttons">
+            <button class="btn" onclick="calculateFunction('factorial')">x!</button>
+            <button class="btn" onclick="appendValue('(')">(</button>
+            <button class="btn" onclick="appendValue(')')">)</button>
+            <button class="btn" onclick="appendValue('%')">%</button>
+            <button class="btn" onclick="clearResult()">AC</button>
+            <button class="btn" onclick="deleteLast()">Del</button>
+            
+            <button class="btn" onclick="appendValue('Math.PI')">π</button>
+            <button class="btn" onclick="appendValue('Math.E')">e</button>
+            <button class="btn" onclick="calculateFunction('sin')">sin</button>
+            <button class="btn" onclick="calculateFunction('cos')">cos</button>
+            <button class="btn" onclick="calculateFunction('tan')">tan</button>
+
+            <button class="btn" onclick="calculateFunction('log')">log</button>
+            <button class="btn" onclick="calculateFunction('sqrt')">√</button>
+            <button class="btn" onclick="appendValue('**')">xʸ</button>
+            <button class="btn" onclick="appendValue('/')">÷</button>
+            <button class="btn" onclick="appendValue('*')">×</button>
+            
+            <button class="btn" onclick="appendValue('+')">+</button>
+            <button class="btn" onclick="appendValue('-')">-</button>
+            <button class="btn" onclick="appendValue('9')">9</button>
+            <button class="btn" onclick="appendValue('8')">8</button>
+            
+            <button class="btn" onclick="appendValue('7')">7</button>
+            <button class="btn" onclick="appendValue('6')">6</button>
+            <button class="btn" onclick="appendValue('5')">5</button>
+            <button class="btn" onclick="appendValue('4')">4</button>
+            
+            <button class="btn" onclick="appendValue('3')">3</button>
+            <button class="btn" onclick="appendValue('2')">2</button>
+            <button class="btn" onclick="appendValue('1')">1</button>
+            <button class="btn" onclick="appendValue('0')">0</button>
+            <button class="btn" onclick="appendValue('.')">.</button>
+            <button class="btn equals" onclick="calculateResult()">=</button>
+
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
